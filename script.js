@@ -57,6 +57,12 @@ function loadQuiz() {
     b_text.innerText = currentQuizData.b
     c_text.innerText = currentQuizData.c
     d_text.innerText = currentQuizData.d
+    
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+     'question_item': currentQuizData.question,
+     'answers':[{'a':currentQuizData.a},{'b':currentQuizData.b},{'c':currentQuizData.c},{'d':currentQuizData.d}]
+     });
 }
 
 function deselectAnswers() {
